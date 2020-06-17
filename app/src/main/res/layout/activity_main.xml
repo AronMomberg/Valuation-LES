@@ -64,4 +64,16 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Toque para inserir o crescimento do ano 3" />
+
+    <EditText
+        android:id="@+id/edtResultadoUltimoAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="185dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="resultado" />
 </RelativeLayout>
