@@ -10,16 +10,31 @@
 
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="wrap_content"
+        android:layout_width="146dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="646dp"
-        android:layout_marginBottom="37dp"
-        android:text="Calcular"
+        android:layout_marginStart="227dp"
+        android:layout_marginTop="648dp"
+        android:layout_marginBottom="35dp"
+        android:text="CALCULAR"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="531dp" />
+
+    <Button
+        android:id="@+id/btnCalcular2"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="649dp"
+        android:layout_marginBottom="34dp"
+        android:text="VOLTAR"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="531dp" />
 
@@ -30,7 +45,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp"
-        android:text="Insira o Cresimento"
+        android:text="INSIRA O CRESCIMENTO EM PORCENTAGEM (%)"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -41,10 +56,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="225dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Toque para inserir o crescimento do ano 1" />
+        android:text="EX: 5" />
 
     <EditText
         android:id="@+id/edtAno2"
@@ -52,10 +67,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="278dp"
+        android:layout_marginTop="355dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Toque para inserir o crescimento do ano 2" />
+        android:text="EX: 4" />
 
     <EditText
         android:id="@+id/edtAno3"
@@ -63,22 +78,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="275dp"
+        android:layout_marginBottom="202dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Toque para inserir o crescimento do ano 3" />
-
-    <EditText
-        android:id="@+id/edtResultadoUltimoAno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="185dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="resultado" />
+        android:text="EX: 3" />
 
     <TextView
         android:id="@+id/txtResultadoFinal"
