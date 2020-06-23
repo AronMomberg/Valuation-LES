@@ -12,6 +12,7 @@ import java.text.BreakIterator;
 public class MainActivity extends AppCompatActivity {
 
     EditText resultado;
+    TextView resultadoFinal;
     EditText ano1;
     EditText ano2;
     EditText ano3;
@@ -26,16 +27,50 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void Calculo(){
+        //REFERENCIANDO OS ELEMENTOS DO XML COM O JAVA
         resultado = (EditText)findViewById(R.id.edtResultadoUltimoAno);
+        resultadoFinal = (TextView) findViewById(R.id.txtResultadoFinal);
         ano1 = (EditText)findViewById(R.id.edtAno1);
         ano2 = (EditText)findViewById(R.id.edtAno2);
         ano3 = (EditText)findViewById(R.id.edtAno3);
         btcalcular = (Button)findViewById(R.id.btnCalcular);
 
+        //LIMPAR O EDITTEXT AO TOCAR
+        ano1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) ano1.setText("");
+                return false;
+            }
+        });
+        ano2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) ano2.setText("");
+                return false;
+            }
+        });
+        ano3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) ano3.setText("");
+                return false;
+            }
+        });
+        resultado.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) resultado.setText("");
+                return false;
+            }
+        });
+
+        //AÇÃO DO BOTÃO CALCULAR
         btcalcular.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
+                //CONVERTENDO STRING PARA DOUBLE
                 double Aresultado = Double.parseDouble(resultado.getText().toString());
                 double Aano1 = Double.parseDouble(ano1.getText().toString());
                 double Aano2 = Double.parseDouble(ano2.getText().toString());
@@ -71,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
 
                 //VALOR DA EMPRESA
                 double valorEmpresa = VPAno1 + VPAno2 + VPAno3 + VPAno4 + VPAno5;
+
+                //EXIBINDO O RESULTADO
+                resultadoFinal.setText("O valor da empresa é de " + valorEmpresa);
             }
             });
     }

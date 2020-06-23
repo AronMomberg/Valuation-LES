@@ -16,9 +16,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="677dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="646dp"
+        android:layout_marginBottom="37dp"
         android:text="Calcular"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="531dp" />
@@ -30,7 +30,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp"
-        android:text="Insira o Cresimento" />
+        android:text="Insira o Cresimento"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtAno1"
@@ -76,4 +79,18 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="resultado" />
+
+    <TextView
+        android:id="@+id/txtResultadoFinal"
+        android:layout_width="340dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="113dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
 </RelativeLayout>
