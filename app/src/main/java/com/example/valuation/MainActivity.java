@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*double resultadoUltimo = Double.parseDouble(resultadoUltimoano.getText().toString());
+                Intent intentEnviadora = new Intent(getApplicationContext(), tela1.class);
+                Bundle parametros = new Bundle();
+                parametros.putDouble("chave_resultado", resultadoUltimo);
+                intentEnviadora.putExtras(parametros);
+                startActivity(intentEnviadora);*/
+
                 Intent intent = new Intent(getApplicationContext(), tela1.class);
                 startActivity(intent);
             }
@@ -38,5 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public  void irParaTela1(View view){
+        Intent intencao = new Intent(this,tela1.class);
+        double resultadoUltimo = Double.parseDouble(resultadoUltimoano.getText().toString());
+        Bundle parametros = new Bundle();
+        parametros.putDouble("chave_resultado", resultadoUltimo);
+        intencao.putExtras(parametros);
+        startActivity(intencao);
     }
 }
