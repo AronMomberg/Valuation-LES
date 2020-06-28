@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:drawable/screen_background_light"
     tools:context=".tela1">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:text="INSIRA O CRESCIMENTO EM PORCENTAGEM (%)"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtAno1"
@@ -25,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="248dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="EX: 5" />
@@ -35,8 +23,8 @@
         android:layout_width="351dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="355dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="375dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="EX: 4" />
@@ -47,29 +35,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="195dp"
+        android:layout_marginBottom="173dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="EX: 3" />
 
-    <Button
-        android:id="@+id/btnVoltar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="30dp"
-        android:text="VOLTAR" />
 
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="149dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="31dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="131dp"
         android:layout_marginBottom="30dp"
+        android:backgroundTint="#03A9F4"
         android:text="CALCULAR" />
 
     <TextView
@@ -90,6 +71,74 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="42dp"
         android:layout_marginBottom="142dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txtAno3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="222dp"
+        android:text="Ano 3" />
+
+    <TextView
+        android:id="@+id/txtAno2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="33dp"
+        android:text="Ano 2" />
+
+    <TextView
+        android:id="@+id/txtAno1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="224dp"
+        android:text="Ano 1" />
+
+    <TextView
+        android:id="@+id/txtAzul1"
+        android:layout_width="413dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#03A9F4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:background="@android:drawable/screen_background_light"
+        android:backgroundTint="@android:color/background_light"
+        android:text="INSIRA O CRESCIMENTO ANUAL PREVISTO EM PORCENTAGEM (%)"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-4dp"
+        android:backgroundTint="#03A9F4"
+        android:tint="#000000"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </RelativeLayout>

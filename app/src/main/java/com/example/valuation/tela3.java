@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class tela3 extends AppCompatActivity {
 
     TextView valorEmpresa;
-    private Button btVoltar;
+    private ImageButton btVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class tela3 extends AppCompatActivity {
 
         //REFERÊNCIAR OS OBJETOS
         valorEmpresa = (TextView)findViewById(R.id.txtValorFinal);
-        btVoltar = (Button) findViewById(R.id.btnVoltar);
+        btVoltar = (ImageButton) findViewById(R.id.btnVoltar);
 
         //AÇÃO BOTÃO VOLTAR
         btVoltar.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +33,7 @@ public class tela3 extends AppCompatActivity {
             }
         });
 
+        //PEGAR VALOR DA OUTRA TELA
         Intent dados = getIntent();
         if(dados != null){
             String dadosRecebidos = dados.getStringExtra("resultadoUltimo");

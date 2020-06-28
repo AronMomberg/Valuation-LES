@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.BreakIterator;
@@ -22,24 +23,21 @@ public class tela1 extends AppCompatActivity {
     EditText ano2;
     EditText ano3;
     Button btcalcular;
-    Button btVoltar;
+    ImageButton btVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela1);
 
-        //REFERENCIANDO OS BOTÕES
-        btcalcular = (Button) findViewById(R.id.btnCalcular);
-        btVoltar = (Button)findViewById(R.id.btnVoltar);
-
-        //REFERENCIANDO OS ELEMENTOS DO XML COM O JAVA
+        //REFERENCIANDO OBJETOS
         resultado = (TextView)findViewById(R.id.txtUltimoResultado);
         resultadoFinal = (TextView) findViewById(R.id.txtResultadoFinal);
         ano1 = (EditText) findViewById(R.id.edtAno1);
         ano2 = (EditText) findViewById(R.id.edtAno2);
         ano3 = (EditText) findViewById(R.id.edtAno3);
         btcalcular = (Button) findViewById(R.id.btnCalcular);
+        btVoltar = (ImageButton)findViewById(R.id.btnVoltar);
 
         //PEGAR VALOR DA OUTRA TELA
         Intent dados = getIntent();
@@ -80,6 +78,7 @@ public class tela1 extends AppCompatActivity {
         btcalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //IR PARA A PRÓXIMA TELA
                 Intent intent = new Intent(getApplicationContext(), tela3.class);
                 startActivity(intent);
 
@@ -133,9 +132,6 @@ public class tela1 extends AppCompatActivity {
                 startActivity(intentEnviadora);
             }
         });
-
-        //AÇÃO BOTÃO VOLTAR
-        btVoltar = (Button) findViewById(R.id.btnVoltar);
 
         btVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
