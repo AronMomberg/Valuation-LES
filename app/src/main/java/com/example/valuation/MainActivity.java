@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //ENVIA PARA OUTRA TELA
                 Intent intentEnviadora = new Intent(getApplicationContext(), tela1.class);
-                tela1.putExtra("resultadoUltimo", resultadoUltimoano.toString());
+                intentEnviadora.putExtra("resultadoUltimo", resultadoUltimoano.getText().toString());
                 startActivity(intentEnviadora);
 
-                Intent intent = new Intent(getApplicationContext(), tela1.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), tela1.class);
+                //startActivity(intent);
             }
         });
         resultadoUltimoano.setOnTouchListener(new View.OnTouchListener() {

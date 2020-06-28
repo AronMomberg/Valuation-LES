@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.text.BreakIterator;
+import java.text.DecimalFormat;
 
 public class tela1 extends AppCompatActivity {
 
@@ -41,9 +45,11 @@ public class tela1 extends AppCompatActivity {
         Intent dados = getIntent();
         if(dados != null){
             String dadosRecebidos = dados.getStringExtra("resultadoUltimo");
+            Log.d("filtro", dadosRecebidos+ "");
+            resultadoFinal.setText(dadosRecebidos.toString());
             if(dadosRecebidos != null) {
-                String resultadoUltimoano = null;
-                resultado.setText(resultadoUltimoano);
+                String resultadoUltimoano = dadosRecebidos;
+                resultado.setText(dadosRecebidos);
             }
         }
 
@@ -103,7 +109,7 @@ public class tela1 extends AppCompatActivity {
                 double resultadoAno5 = resultadoAno4 + (resultadoAno4 * ano5D);
 
                 //TAXA SELIC
-                double txSELIC = 0.03;
+                double txSELIC = 0.025;
 
                 //TRAZENDO OS CRESCIMENTOS PARA O VALOR PRESENTE ATRAVÉS DA TAXA SELIC
                 double VPAno1 = resultadoAno1 / (1 + txSELIC);
@@ -115,8 +121,16 @@ public class tela1 extends AppCompatActivity {
                 //VALOR DA EMPRESA
                 double valorEmpresa = VPAno1 + VPAno2 + VPAno3 + VPAno4 + VPAno5;
 
+                //FORMATANDO O VALOR DA EMPRESA PARA DUAS CASAS
+                String resultado = String.format("%.2f", valorEmpresa);
+
                 //EXIBINDO O RESULTADO
-                resultadoFinal.setText("O valor da empresa é de " + valorEmpresa);
+                resultadoFinal.setText("R$ " + resultado);
+
+                //ENVIA PARA OUTRA TELA
+                Intent intentEnviadora = new Intent(getApplicationContext(), tela3.class);
+                intentEnviadora.putExtra("resultadoUltimo", resultadoFinal.getText().toString());
+                startActivity(intentEnviadora);
             }
         });
 
