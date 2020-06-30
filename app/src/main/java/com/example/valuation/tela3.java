@@ -13,7 +13,8 @@ import android.widget.TextView;
 public class tela3 extends AppCompatActivity {
 
     TextView valorEmpresa;
-    private ImageButton btVoltar;
+    ImageButton btVoltar;
+    Button btRefazer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +23,23 @@ public class tela3 extends AppCompatActivity {
 
         //REFERÊNCIAR OS OBJETOS
         valorEmpresa = (TextView)findViewById(R.id.txtValorFinal);
-        btVoltar = (ImageButton) findViewById(R.id.btnVoltar);
+        btVoltar = (ImageButton)findViewById(R.id.btnVoltar1);
+        btRefazer = (Button)findViewById(R.id.btnRefazer);
 
         //AÇÃO BOTÃO VOLTAR
         btVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), tela1.class);
+                startActivity(intent);
+            }
+        });
+
+        //AÇÃO BOTÃO REFAZER
+        btRefazer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

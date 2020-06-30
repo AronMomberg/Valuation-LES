@@ -49,8 +49,20 @@
         android:layout_marginEnd="0dp"
         android:background="#03A9F4" />
 
+    <Button
+        android:id="@+id/btnRefazer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#03A9F4"
+        android:text="REFAZER" />
+
     <ImageButton
-        android:id="@+id/btnVoltar"
+        android:id="@+id/btnVoltar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
